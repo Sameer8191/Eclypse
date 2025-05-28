@@ -14,21 +14,21 @@ const testimonialsData: Testimonial[] = [
     name: 'Random Woman',
     location: 'NY, USA',
     quote: 'Understated, but unforgettable. It feels like it was made for me',
-    image: '../public/assets/Reviews/Ellipse 4.png',
+    image: '/assets/Reviews/Ellipse 4.png',
   },
   {
     id: 2,
     name: 'Cool Guy',
     location: 'LA, USA',
     quote: 'A product that truly understands me!',
-    image: '../public/assets/Reviews/Ellipse 5.png',
+    image: '/assets/Reviews/Ellipse 5.png',
   },
   {
     id: 3,
     name: 'Artistic Lady',
     location: 'Paris, France',
     quote: 'A delightful experience, perfectly crafted.',
-    image: '../public/assets/Reviews/Ellipse 3.png',
+    image: '/assets/Reviews/Ellipse 3.png',
   },
 ];
 

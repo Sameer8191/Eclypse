@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       {/* Header */}
       <header className="flex justify-between items-center p-4 border-b border-gray-800 text-sm sm:text-base relative">
         {/* Logo left */}
-        <img src="./public/assets/Frame 8.png" alt="Eclypse logo" className="h-8 sm:h-10" />
+        <img src="/assets/Frame 8.png" alt="Eclypse logo" className="h-8 sm:h-10" />
 
         {/* Hamburger button right on small screens */}
         <button
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
 
       <section className="relative h-[50vh] sm:h-screen overflow-hidden">
         <video autoPlay muted loop className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src="./public/assets/Videos/Eclypse – Figma.mov" type="video/mp4" />
+          <source src="/assets/Videos/Eclypse – Figma.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-base sm:text-3xl z-10">
@@ -121,10 +121,10 @@ const Home: React.FC = () => {
             muted
             loop
             className="w-full h-60 sm:h-110 object-cover"
-            src="./public/assets/Videos/Eclypse – Figma.mp4"
+            src="/assets/Videos/Eclypse – Figma.mp4"
           />
           <img
-            src="./public/assets/media/Frame 18.png"
+            src="/assets/media/Frame 18.png"
             alt="Look 2"
             className="w-full h-60 sm:h-110 object-cover"
           />
@@ -132,9 +132,9 @@ const Home: React.FC = () => {
 
         <section className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2 max-w-8xl mx-auto">
   {[
-    "./public/assets/media/Frame 18(2).png",
-    "./public/assets/media/Frame 18(1).png",
-    "./public/assets/media/Frame 19.png",
+    "./assets/media/Frame 18(2).png",
+    "./assets/media/Frame 18(1).png",
+    "./assets/media/Frame 19.png",
   ].map((src, idx) => (
     <img
       key={idx}
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
         {/* Left Video */}
         <div className="flex-1 overflow-hidden">
           <video autoPlay muted loop className="w-full h-[300px] md:h-[800px] object-cover">
-            <source src="./public/assets/Videos/Eclypse – Figma_2.mp4" />
+            <source src="/assets/Videos/Eclypse – Figma_2.mp4" />
           </video>
         </div>
 
@@ -174,9 +174,9 @@ const Home: React.FC = () => {
 
             <div className="flex justify-center gap-2 md:gap-6 mb-4 md:mb-6">
               {[
-                "./public/assets/Thumb/Frame 11.png",
-                "./public/assets/Thumb/Frame 12.png",
-                "./public/assets/Thumb/Frame 13.png",
+                "./assets/Thumb/Frame 11.png",
+                "./assets/Thumb/Frame 12.png",
+                "./assets/Thumb/Frame 13.png",
               ].map((src, idx) => (
                 <img
                   key={idx}
