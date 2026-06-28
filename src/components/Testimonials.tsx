@@ -37,37 +37,29 @@ const TestimonialSection: React.FC = () => {
 
   const handlePrev = (): void => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonialsData.length : prevIndex - 1
+      prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = (): void => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 2
+      prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const currentTestimonial = testimonialsData[currentIndex + 1];
+  const currentTestimonial = testimonialsData[currentIndex];
 
   return (
     <div className="bg-black text-white px-4 py-6 pl-0 max-w-7xl mx-auto mt-5 flex flex-col md:flex-row justify-between items-center relative gap-8">
       {/* Review Section */}
       <div className="max-w-xl md:max-w-2xl text-center md:text-left">
-        <h2 className="uppercase text-xs tracking-widest mb-4 md:mb-5">
-          Our Customers
-        </h2>
-
+        <h2 className="uppercase text-xs tracking-widest mb-4 md:mb-5">Our Customers</h2>
         <blockquote className="text-2xl sm:text-3xl md:text-4xl leading-snug mb-4 md:mb-5">
-          "{currentTestimonial.quote}"
+          “{currentTestimonial.quote}”
         </blockquote>
-
         <div>
-          <div className="font-normal text-lg">
-            {currentTestimonial.name}
-          </div>
-          <div className="text-xs text-gray-400 mt-1">
-            {currentTestimonial.location}
-          </div>
+          <div className="font-normal text-lg">{currentTestimonial.name}</div>
+          <div className="text-xs text-gray-400 mt-1">{currentTestimonial.location}</div>
         </div>
       </div>
 
@@ -82,7 +74,7 @@ const TestimonialSection: React.FC = () => {
           aria-label="Previous testimonial"
           tabIndex={0}
           onKeyDown={(e) => {
-            if (e.key === 'Enter') handleNext();
+            if (e.key === 'Enter' || e.key === ' ') handlePrev();
           }}
         >
           <path d="M6 15l6-6 6 6" />
@@ -92,14 +84,14 @@ const TestimonialSection: React.FC = () => {
         <div className="flex flex-row md:flex-col gap-3">
           {testimonialsData.map((testimonial, index) => (
             <img
-              key={index}
+              key={testimonial.id}
               src={testimonial.image}
               alt={testimonial.name}
               className={`rounded-full cursor-pointer border-2 ${
                 currentIndex === index ? 'border-white' : 'border-transparent'
               } w-14 h-14 sm:w-20 sm:h-20`}
-              style={{ objectFit: 'cover' }}
-              onClick={() => setCurrentIndex(index + 1)}
+              style={{ objectFit: 'fill' }}
+              onClick={() => setCurrentIndex(index)}
             />
           ))}
         </div>
@@ -113,7 +105,7 @@ const TestimonialSection: React.FC = () => {
           aria-label="Next testimonial"
           tabIndex={0}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') handlePrev();
+            if (e.key === 'Enter' || e.key === ' ') handleNext();
           }}
         >
           <path d="M6 9l6 6 6-6" />
@@ -124,4 +116,3 @@ const TestimonialSection: React.FC = () => {
 };
 
 export default TestimonialSection;
-
