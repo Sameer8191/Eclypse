@@ -156,7 +156,7 @@ const Home: React.FC = () => {
       <div className="flex flex-col md:flex-row max-w-8xl mx-auto bg-white text-black my-10 h-auto">
         {/* Left Video */}
         <div className="flex-1 overflow-hidden">
-          <video autoPlay muted loop className="w-full h-[300px] md:h-[800px] object-cover">
+          <video autoPlay muted loop className="w-full h-75 md:h-200 object-cover">
             <source src="/assets/Videos/Eclypse – Figma_2.mp4" />
           </video>
         </div>
